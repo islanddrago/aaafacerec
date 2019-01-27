@@ -6,16 +6,13 @@ import Navbar from './Webcame';
 import Form from './Form.js';
 
 const Index = () => <h2></h2>
-const Signup = () => <h2>Sign Up</h2>
-const Signin = () => <h2>Sign In</h2>
 
 class App extends Component {
-
- 
-  signinClicked(){
+  
+    signinClicked(){
       return(
         <div>
-           <Navbar>  
+           <Navbar signin>  
           </Navbar>
         </div>
       );
