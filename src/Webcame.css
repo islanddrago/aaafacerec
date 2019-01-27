@@ -7,11 +7,13 @@
 .webcam {
     display: flex;
     justify-content: center;
-
     width: 60vw;
 }
 
 .button {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
     width: unset;
 }
 /* .a:link, a:visited{ */
@@ -21,7 +23,7 @@
   border-radius: 20%;
   color: white;
   text-align: center;
-  font-size: 5px;
+  font-size: 15px;
   text-decoration: none;
   display: inline-block;
 }

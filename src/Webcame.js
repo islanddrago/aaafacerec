@@ -4,12 +4,11 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./Webcame.css"
 
 const Back = () => <h2></h2>
-
 export default class Navbar extends Component {
         setRef = webcam => {
           this.webcam = webcam;
         };
-       
+
         capture = () => {
           const imageSrc = this.webcam.getScreenshot();
          // console.log(imageSrc);
@@ -32,25 +31,20 @@ export default class Navbar extends Component {
           };
        
           return (
+            
             <div className={'container'}>
               <div className={'webcam'}>
                 <Webcam
                   audio={false}
                   height={'100%'}
                   ref={this.setRef}
-                  screenshotFormat="image/jpeg"
+                  screenshotFormat="image/jpe`g"
                   width={'100%'}
                   videoConstraints={videoConstraints}
                 />
               </div>
               <button className={'button'} onClick={this.capture}>Capture photo</button>
-              
 
-
-              {/* <div id = "awebcam">
-                <Link to="/Back" onClick={this.backClicked}>Back</Link>  
-                 <a href="#" class="previous round">&#8249;</a> 
-                </div> */}
             </div>
           );
         }

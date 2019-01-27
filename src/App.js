@@ -3,6 +3,7 @@ import logo from './aaLogo.png';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Navbar from './Webcame';
+import Form from './Form.js';
 
 const Index = () => <h2></h2>
 const Signup = () => <h2>Sign Up</h2>
@@ -10,7 +11,8 @@ const Signin = () => <h2>Sign In</h2>
 
 class App extends Component {
 
-    signinClicked(){
+ 
+  signinClicked(){
       return(
         <div>
            <Navbar>  
@@ -22,9 +24,12 @@ class App extends Component {
     signupClicked(){
       return(
         <div>
-          <Navbar>  
-          </Navbar>
+          <Form/>
+          <div> 
+          </div>
+          
         </div>
+        
       );
       console.log('test')
     }
@@ -45,17 +50,7 @@ class App extends Component {
             </div>
           )}/>
           <Route exact path='/Signup' component={this.signupClicked}/>
-          {/* <Route exact={true} path='/Signup' render={() => (
-            <div className="App">
-              <Signup/>
-            </div>
-          )}/> */}
           <Route exact path='/Signin' component={this.signinClicked}/>
-          {/* <Route exact={true} path='/Signin' render={() => (
-            <div className="App">
-              <Signin/>
-            </div>
-          )}/> */}
         </div>
       </Router>
     );

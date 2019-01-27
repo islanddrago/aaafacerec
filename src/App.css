@@ -25,7 +25,16 @@ img {
   /* margin-bottom: 175%; */
 }
 
-a:link, a:visited {
+ a:link, a:visited { 
+    background-color: #0078D2;
+    border-radius: 20%;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    padding: 14px 25px;
+    justify-content: space-between;
+  }
+  #asign{
   flex: 2;
   justify-content: space-between;
   background-color: #0078D2;
@@ -69,4 +78,11 @@ button:hover{
   display: flex;
   height: 200px;
   align-items: center;
+}
+input{
+  display: flex table-column;
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
