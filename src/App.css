@@ -23,17 +23,23 @@ img {
   width: auto;
   /* margin-bottom: 175%; */
 }
-button {
-  flex:1;
+a:link, a:visited {
+  flex: 2;
   justify-content: space-between;
-  width: 30%;
-  border-radius: 20px;
   background-color: #0078D2;
   color: white;
-  padding: 1em;
+  padding: 14px 25px;
+  text-align: center;
   font-size: 50px;
+  text-decoration: none;
+  margin: 20px;
+  width: 30%;
+  height: 115px;
+  display: inline-block;
 }
-button:hover {
-  background-color: #9DA6AB;
+
+a:hover {
   color: white;
+  background-color: #9DA6AB;
+  text-decoration: none;
 }
