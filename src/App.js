@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import logo from './aaLogo.png';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-<<<<<<< HEAD
-import Navbar from './Webcame'
-=======
 import Navbar from './Webcame';
->>>>>>> 36d71beb6c7a90ced4b8b2e412f90eef8d12d624
 
 const Index = () => <h2></h2>
 const Signup = () => <h2>Sign Up</h2>
@@ -17,13 +13,8 @@ class App extends Component {
     signinClicked(){
       return(
         <div>
-<<<<<<< HEAD
-          <Navbar></Navbar>
-          <h1>Test</h1>
-=======
            <Navbar>  
           </Navbar>
->>>>>>> 36d71beb6c7a90ced4b8b2e412f90eef8d12d624
         </div>
       );
     }

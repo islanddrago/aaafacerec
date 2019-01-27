@@ -6,6 +6,42 @@ import "./Webcame.css"
 const Back = () => <h2></h2>
 
 export default class Navbar extends Component {
+        setupTable(){
+          var body = JSON.stringify({
+              //  'faceListId': 'woweewoo',
+                'name': 'faceList'
+            });
+            console.log(body, body.length);
+          // fetch('https://centralus.api.cognitive.microsoft.com/face/v1.0/facelists/reeee', {
+          //   method: 'PUT',
+          //   headers: {
+          //     'Content-Type': 'application/json',
+          //     'Ocp-Apim-Subscription-Key': '8fe89af6c1264809aa7cb1178e4a98bd',
+          //     'Content-Length': body.length
+          //   },
+          //   body: body
+          // })
+          var data = new FormData();
+data.append("name", "please");
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === 4) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("PUT", "https://?faceListId=5689&persistedFaceId=959bea80-796c-4403-935c-3a364675bcc6&=");
+xhr.setRequestHeader("Ocp-Apim-Subscription-Key", "8fe89af6c1264809aa7cb1178e4a98bd");
+xhr.setRequestHeader("cache-control", "no-cache");
+xhr.setRequestHeader("Postman-Token", "a0ea8a6f-4220-4d88-9b78-ca538115dc67");
+
+xhr.send(data);
+          
+        }
+
         setRef = webcam => {
           this.webcam = webcam;
         };
@@ -30,6 +66,10 @@ export default class Navbar extends Component {
 
         };
        
+        componentDidMount(){
+          this.setupTable();
+        }
+
         render() {
           const videoConstraints = {
             width: 1280,
