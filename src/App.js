@@ -1,27 +1,17 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
-import logo from './logo.svg';
+import logo from './aaLogo.png';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar />
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+          <img src={logo} className="App-logo" alt="logo"/>
+          <div className="ButtonDiv">
+            <button id="registerButton" onClick={this.register}>Register</button>
+            <button id="signInButton" onClick={this.signIn}>Sign In</button>
+          </div>
       </div>
     );
   }
