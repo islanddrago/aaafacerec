@@ -8,7 +8,16 @@ export default class Navbar extends Component {
        
         capture = () => {
           const imageSrc = this.webcam.getScreenshot();
-          console.log(imageSrc);
+         // console.log(imageSrc);
+          let promise = fetch('http://localhost:5000/tradeinfo',{
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                  image: imageSrc
+              })
+          }).then(() => {})
+          // promise.then((imageSrc))
+
         };
        
         render() {
