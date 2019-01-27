@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.webcam {
+    display: flex;
+    justify-content: center;
+
+    width: 60vw;
+}
+
+.button {
+    width: unset;
+}
+/* .a:link, a:visited{ */
+#awebcam{
+    flex: 1;
+  background-color: #0078D2;
+  border-radius: 20%;
+  color: white;
+  text-align: center;
+  font-size: 5px;
+  text-decoration: none;
+  display: inline-block;
+}

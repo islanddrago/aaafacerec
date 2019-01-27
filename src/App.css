@@ -17,16 +17,19 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 img {
   flex:1;
   height: 45px;
   width: auto;
   /* margin-bottom: 175%; */
 }
+
 a:link, a:visited {
   flex: 2;
   justify-content: space-between;
   background-color: #0078D2;
+  border-radius: 20%;
   color: white;
   padding: 14px 25px;
   text-align: center;
@@ -42,4 +45,28 @@ a:hover {
   color: white;
   background-color: #9DA6AB;
   text-decoration: none;
+}
+
+button {
+  flex: 1;
+  color:white;
+  background-color: #0078D2;
+  border-radius: 20%;
+  padding: 14px 25px;
+  text-align: center;
+  font-size: 50px;
+  text-decoration: none;
+  height: 100px;
+}
+
+button:hover{
+  color: white;
+  background-color: #9DA6AB;
+  text-decoration: none;
+}
+
+.flex-container {
+  display: flex;
+  height: 200px;
+  align-items: center;
 }

@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import logo from './aaLogo.png';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Navbar from './Webcame';
 
-const Index = () => <h2>Home</h2>
+const Index = () => <h2></h2>
 const Signup = () => <h2>Sign Up</h2>
 const Signin = () => <h2>Sign In</h2>
 
@@ -12,7 +13,8 @@ class App extends Component {
     signinClicked(){
       return(
         <div>
-          <h1>Test</h1>
+           <Navbar>  
+          </Navbar>
         </div>
       );
     }
@@ -20,7 +22,8 @@ class App extends Component {
     signupClicked(){
       return(
         <div>
-          <h1>Test</h1>
+          <Navbar>  
+          </Navbar>
         </div>
       );
       console.log('test')
@@ -42,31 +45,19 @@ class App extends Component {
             </div>
           )}/>
           <Route exact path='/Signup' component={this.signupClicked}/>
-          <Route exact={true} path='/Signup' render={() => (
+          {/* <Route exact={true} path='/Signup' render={() => (
             <div className="App">
               <Signup/>
             </div>
-          )}/>
+          )}/> */}
           <Route exact path='/Signin' component={this.signinClicked}/>
-          <Route exact={true} path='/Signin' render={() => (
+          {/* <Route exact={true} path='/Signin' render={() => (
             <div className="App">
               <Signin/>
             </div>
-          )}/>
+          )}/> */}
         </div>
       </Router>
-    // <Router>
-    //   <div className="App">
-    //       <img src={logo} className="App-logo" alt="logo"/>
-    //       <div className="ButtonDiv">
-    //         <Link to="/register" onClick={this.registerClicked}>Register</Link>  
-    //         <Link to="/signIn" onClick={this.signInClicked}>Sign In</Link>
-    //       </div>
-    //     <Route path="/" exact component={Index} />
-    //   <Route path="/about/" component={register} />
-    //   <Route path="/users/" component={signIn} />
-    //   </div>
-    // </Router>
     );
   }
 }
