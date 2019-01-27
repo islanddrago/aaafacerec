@@ -15,7 +15,13 @@ export default class Navbar extends Component {
               body: JSON.stringify({
                   image: imageSrc
               })
-          }).then(() => {})
+          }).then((data) => data.json())
+          .then((json) => {
+
+            console.log(json.url);
+
+
+          });
           // promise.then((imageSrc))
 
         };
