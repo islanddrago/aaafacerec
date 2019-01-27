@@ -13,7 +13,7 @@ class App extends Component {
     signinClicked(){
       return(
         <div>
-           <Navbar>  
+           <Navbar signin>  
           </Navbar>
         </div>
       );
@@ -22,7 +22,7 @@ class App extends Component {
     signupClicked(){
       return(
         <div>
-          <Navbar>  
+          <Navbar signup>  
           </Navbar>
         </div>
       );
